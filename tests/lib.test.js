@@ -15,3 +15,8 @@ describe("absolute test", () => {
     expect(result).toBe(0);
   });
 });
+
+
+module.exports.greet = function(name){
+    return `Hello ${name}`
+}
