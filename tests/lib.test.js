@@ -17,6 +17,9 @@ describe("absolute test", () => {
 });
 
 
-module.exports.greet = function(name){
-    return `Hello ${name}`
-}
+describe('test for string', ()=> {
+    it('should return greetings', () => {
+        const result = lib.greet('Dotun')
+        expect(result).toBe('Hello Dotun')
+    })
+})
