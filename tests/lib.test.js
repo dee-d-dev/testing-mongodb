@@ -17,6 +17,3 @@ describe("absolute test", () => {
 });
 
 
-module.exports.greet = function(name){
-    return `Hello ${name}`
-}
