@@ -3,5 +3,5 @@ module.exports.absolute = function (number) {
 };
 
 module.exports.greet = function (name) {
-  return `Hello ${name}`;
+  return `Hello ${name}!`;
 };

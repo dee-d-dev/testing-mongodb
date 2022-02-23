@@ -17,12 +17,11 @@ describe("absolute test", () => {
 });
 
 
-<<<<<<< HEAD
+
 describe('test for string', ()=> {
     it('should return greetings', () => {
         const result = lib.greet('Dotun')
-        expect(result).toBe('Hello Dotun')
+        expect(result).toContain('Dotun')
     })
 })
-=======
->>>>>>> 95fae3b85f4b66dfec462457c1fcd2c601950047
+
