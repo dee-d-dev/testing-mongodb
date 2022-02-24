@@ -51,6 +51,17 @@ describe("get products", () => {
 
     //ideal
     expect(result).toMatchObject({ id: 1, price: 10 });
-    expect(result).toHaveProperty('id', 1);
+    expect(result).toHaveProperty("id", 1);
+  });
+});
+
+describe("testing exception", () => {
+  it("should throw error if username is falsy", () => {
+    const args = [null, 0, false, NaN, undefined, ""];
+    args.forEach((a) => {
+      expect(() => {
+        lib.registerUser(a);
+      }).toThrow();
+    });
   });
 });
