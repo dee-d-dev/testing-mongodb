@@ -89,13 +89,23 @@ describe("fizz buzz", () => {
     }).toThrow();
   });
 
-  it("should return fizzbuzz if input is divisible by 5 & 3", () => {
+  it("should return FizzBuzz if input is divisible by 5 & 3", () => {
     const result = lib.fizzBuzz(15);
     expect(result).toBe("FizzBuzz");
   });
 
+  it("should return fizz if it is divisible by 3", () => {
+    const result = lib.fizzBuzz(3);
+    expect(result).toBe("Fizz");
+  });
+
+  it("should return Buzz if it is divisible by 5", () => {
+    const result = lib.fizzBuzz(5);
+    expect(result).toBe("Buzz");
+  });
+
   it("should return input if not divisble by 3 or 5", () => {
-      const result = lib.fizzBuzz(4)
-      expect(result).toBe(4)
-  })
+    const result = lib.fizzBuzz(4);
+    expect(result).toBe(4);
+  });
 });
