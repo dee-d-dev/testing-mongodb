@@ -78,5 +78,19 @@ describe("fizz buzz", () => {
     expect(() => {
       lib.fizzBuzz("a");
     }).toThrow();
+    expect(() => {
+      lib.fizzBuzz(null);
+    }).toThrow();
+    expect(() => {
+      lib.fizzBuzz(undefined);
+    }).toThrow();
+    expect(() => {
+      lib.fizzBuzz({});
+    }).toThrow();
+  });
+
+  it("should return fizzbuzz if input is divisible by 5 & 3", () => {
+      const result = lib.fizzBuzz(15)
+    expect(result).toBe("FizzBuzz");
   });
 });
