@@ -64,4 +64,11 @@ describe("testing exception", () => {
       }).toThrow();
     });
   });
+
+  it('should return a user object if valid username passed', () => {
+      const result = lib.registerUser('Dotun')
+
+      expect(result).toMatchObject({username: 'Dotun'})
+      expect(result.id).toBeGreaterThan(0)
+  })
 });
