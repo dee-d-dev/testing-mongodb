@@ -10,5 +10,5 @@ module.exports.getCurrencies = function () {
   return ["NGN", "EUR", "DIR"];
 };
 module.exports.getProducts = function (productId) {
-  return { id: productId, price: 10 };
+  return { id: productId, price: 10, quanttity: 1};
 };

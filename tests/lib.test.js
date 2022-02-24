@@ -46,6 +46,11 @@ describe("get products", () => {
   it("should return product with given id", () => {
     const result = lib.getProducts(1);
 
-    expect(result).toEqual({ id: 1, price: 10 });
+    //too specific
+    // expect(result).toEqual({ id: 1, price: 10 });
+
+    //ideal
+    expect(result).toMatchObject({ id: 1, price: 10 });
+    expect(result).toHaveProperty('id', 1);
   });
 });
