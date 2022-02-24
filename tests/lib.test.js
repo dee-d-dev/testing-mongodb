@@ -90,7 +90,12 @@ describe("fizz buzz", () => {
   });
 
   it("should return fizzbuzz if input is divisible by 5 & 3", () => {
-      const result = lib.fizzBuzz(15)
+    const result = lib.fizzBuzz(15);
     expect(result).toBe("FizzBuzz");
   });
+
+  it("should return input if not divisble by 3 or 5", () => {
+      const result = lib.fizzBuzz(4)
+      expect(result).toBe(4)
+  })
 });
