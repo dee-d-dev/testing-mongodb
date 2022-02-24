@@ -25,3 +25,13 @@ describe('test for string', ()=> {
     })
 })
 
+describe('test for arrays', ()=> {
+    it('should return an array', ()=> {
+        const result = lib.getCurrencies()
+
+        expect(result[0]).toBe('NGN')
+        expect(result[1]).toBe('EUR')
+        expect(result[2]).toBe('DIR')
+    })
+})
+

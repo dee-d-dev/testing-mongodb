@@ -5,3 +5,7 @@ module.exports.absolute = function (number) {
 module.exports.greet = function (name) {
   return `Hello ${name}!`;
 };
+
+module.exports.getCurrencies = function () {
+  return ["NGN", "EUR", "DIR"];
+};
