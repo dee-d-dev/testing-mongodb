@@ -16,28 +16,28 @@ describe("absolute test", () => {
   });
 });
 
+describe("test for string", () => {
+  it("should return greetings", () => {
+    const result = lib.greet("Dotun");
+    expect(result).toContain("Dotun");
+  });
+});
 
+describe("test for arrays", () => {
+  it("should return an array", () => {
+    const result = lib.getCurrencies();
 
-describe('test for string', ()=> {
-    it('should return greetings', () => {
-        const result = lib.greet('Dotun')
-        expect(result).toContain('Dotun')
-    })
-})
+    //too specific
+    // expect(result[0]).toBe('NGN')
+    // expect(result[1]).toBe('EUR')
+    // expect(result[2]).toBe('DIR')
 
-describe('test for arrays', ()=> {
-    it('should return an array', ()=> {
-      const result = lib.getCurrencies();
+    //proper way
+    // expect(result).toContain("NGN");
+    // expect(result).toContain("EUR");
+    // expect(result).toContain("DIR");
 
-      //too specific
-      // expect(result[0]).toBe('NGN')
-      // expect(result[1]).toBe('EUR')
-      // expect(result[2]).toBe('DIR')
-
-      //proper way
-      expect(result).toContain('NGN')
-      expect(result).toContain('EUR')
-      expect(result).toContain('DIR')
-    })
-})
-
+    //ideal way
+    expect(result).toEqual(expect.arrayContaining(["NGN", "EUR", "DIR"]));
+  });
+});
