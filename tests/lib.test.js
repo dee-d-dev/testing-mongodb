@@ -27,11 +27,17 @@ describe('test for string', ()=> {
 
 describe('test for arrays', ()=> {
     it('should return an array', ()=> {
-        const result = lib.getCurrencies()
+      const result = lib.getCurrencies();
 
-        expect(result[0]).toBe('NGN')
-        expect(result[1]).toBe('EUR')
-        expect(result[2]).toBe('DIR')
+      //too specific
+      // expect(result[0]).toBe('NGN')
+      // expect(result[1]).toBe('EUR')
+      // expect(result[2]).toBe('DIR')
+
+      //proper way
+      expect(result).toContain('NGN')
+      expect(result).toContain('EUR')
+      expect(result).toContain('DIR')
     })
 })
 
