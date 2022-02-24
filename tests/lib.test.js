@@ -41,3 +41,11 @@ describe("test for arrays", () => {
     expect(result).toEqual(expect.arrayContaining(["NGN", "EUR", "DIR"]));
   });
 });
+
+describe("get products", () => {
+  it("should return product with given id", () => {
+    const result = lib.getProducts(1);
+
+    expect(result).toEqual({ id: 1, price: 10 });
+  });
+});
