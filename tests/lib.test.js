@@ -65,10 +65,18 @@ describe("testing exception", () => {
     });
   });
 
-  it('should return a user object if valid username passed', () => {
-      const result = lib.registerUser('Dotun')
+  it("should return a user object if valid username passed", () => {
+    const result = lib.registerUser("Dotun");
 
-      expect(result).toMatchObject({username: 'Dotun'})
-      expect(result.id).toBeGreaterThan(0)
-  })
+    expect(result).toMatchObject({ username: "Dotun" });
+    expect(result.id).toBeGreaterThan(0);
+  });
+});
+
+describe("fizz buzz", () => {
+  it("should throw error if  input is not a number", () => {
+    expect(() => {
+      lib.fizzBuzz("a");
+    }).toThrow();
+  });
 });
